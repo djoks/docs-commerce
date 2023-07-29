@@ -1,4 +1,4 @@
-# Introduction
+# Configuration
 
 Lorem ipsum dolor.
 

@@ -54,7 +54,7 @@ A repeat of the password field.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/auth/login" baseUrl="" summary="Account login" %}
+{% swagger method="get" path="/auth/login" baseUrl="" summary="Account login" expanded="true" %}
 {% swagger-description %}
 This endpoint allows you to log in to an existing account using a registered email and password combination.
 {% endswagger-description %}
@@ -85,6 +85,58 @@ Registered email address of user.
             ]
         }
     }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/auth/verify" baseUrl="" summary="Verify Email" %}
+{% swagger-description %}
+This endpoint allows you to verify a registered account using the registered email and the OTP sent to that email address.
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="email" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="otp" required="true" %}
+Six digit numeric code sent to your email.
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Success" %}
+
+
+```json
+{
+    "message": "Your account has been verified successfully.",
+    "data": {
+        "user": {
+            "id": 40,
+            "email": "email@exampl.com",
+            "phone": "+233263257625",
+            "is_active": true,
+            "roles": [
+                "customer"
+            ]
+        }
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="" baseUrl="/auth/logout" summary="Account logout" expanded="true" %}
+{% swagger-description %}
+This endpoint allows you to logout of an authenticated account.
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Success" %}
+
+
+```json
+{
+    "message": "Logout success",
+    "data": null
 }
 ```
 {% endswagger-response %}

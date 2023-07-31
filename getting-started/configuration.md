@@ -21,5 +21,5 @@ You can seamlessly integrate your application with our E-Commerce API and access
 | --------- | ----------------------- |
 | HOST      | https://api.example.com |
 | VERSION   | v1                      |
-| BASE\_URL | {host}/{apiVersion}/    |
+| BASE\_URL | {HOST}/{VERSION}/       |
 

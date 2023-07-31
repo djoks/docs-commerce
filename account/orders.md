@@ -6,7 +6,7 @@ description: The Orders page displays all orders made by a particular user.
 
 This page is designed exclusively for providing a hassle-free way to view and track your orders. We prioritize transparency and convenience, ensuring you have complete visibility into your purchase history and shipment status.
 
-{% swagger method="get" path="/orders" baseUrl="" summary="Get all orders" %}
+{% swagger expanded="true" method="get" path="/orders" baseUrl="" summary="Get all orders" %}
 {% swagger-description %}
 This endpoint returns an array of all completed orders by the user.
 {% endswagger-description %}
@@ -1171,6 +1171,84 @@ This endpoint returns an array of all completed orders by the user.
         "to": 15,
         "total": 227
     }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/orders/:id" baseUrl="" summary="Get one order" %}
+{% swagger-description %}
+This endpoint returns a single order item based on the id passed within the path parameter.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Success" %}
+
+
+```php
+{
+    "id": 81,
+    "code": "INV-2023-0081",
+    "sub_total": 26133747,
+    "tax": 5723291,
+    "discount": 28877,
+    "total": 31828161,
+    "items": [
+        {
+            "id": 444,
+            "product": {
+                "id": 38,
+                "name": "Pariatur rerum maxime."
+            },
+            "price": 32479
+        },
+        {
+            "id": 445,
+            "product": {
+                "id": 11,
+                "name": "Velit error."
+            },
+            "price": 54418
+        },
+        {
+            "id": 446,
+            "product": {
+                "id": 29,
+                "name": "Cum doloremque qui."
+            },
+            "price": 27070
+        },
+        {
+            "id": 447,
+            "product": {
+                "id": 60,
+                "name": "Aut corporis."
+            },
+            "price": 96403
+        }
+    ],
+    "billing": null,
+    "payment": {
+        "id": 81,
+        "order_id": 81,
+        "reference": "RCTE4WM0UVQE",
+        "status": "Paid",
+        "meta": null,
+        "created_at": "2023-07-20T00:55:19.000000Z",
+        "updated_at": "2023-07-20T00:55:19.000000Z"
+    },
+    "shipping": {
+        "city": "West Earlineview",
+        "state": "Missouri",
+        "country": "Tuvalu",
+        "last_name": "Gleichner",
+        "first_name": "Evangeline",
+        "street_address": "53020 Freddie Viaduct"
+    },
+    "meta": null
 }
 ```
 {% endswagger-response %}

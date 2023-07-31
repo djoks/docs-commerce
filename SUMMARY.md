@@ -10,3 +10,8 @@
 * [Authentication](account/authentication.md)
 * [Billing](account/billing.md)
 * [Orders](account/orders.md)
+
+## Inventory
+
+* [Categories](inventory/categories.md)
+* [Products](inventory/products.md)

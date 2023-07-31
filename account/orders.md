@@ -1176,7 +1176,7 @@ This endpoint returns an array of all completed orders by the user.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/orders/:id" baseUrl="" summary="Get one order" %}
+{% swagger expanded="true" method="get" path="/orders/:id" baseUrl="" summary="Get one order" %}
 {% swagger-description %}
 This endpoint returns a single order item based on the id passed within the path parameter.
 {% endswagger-description %}

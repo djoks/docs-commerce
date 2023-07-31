@@ -300,7 +300,7 @@ This endpoint returns an array of products that are available within the system.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/products/:id" baseUrl="" summary="Get a single product" %}
+{% swagger method="get" path="/products/:id" baseUrl="" summary="Get a single product" expanded="true" %}
 {% swagger-description %}
 This endpoint returns a single product object based on the id passed as a path parameter.
 {% endswagger-description %}

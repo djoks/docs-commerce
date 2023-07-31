@@ -172,7 +172,7 @@ This endpoint creates a new billing address based on the parameters passed withi
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/payment/types" baseUrl="" summary="Get payment types" %}
+{% swagger expanded="true" method="get" path="/payment/types" baseUrl="" summary="Get payment types" %}
 {% swagger-description %}
 This endpoint returns a list of all available payment types.
 {% endswagger-description %}

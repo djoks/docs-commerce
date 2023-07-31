@@ -90,7 +90,7 @@ Registered email address of user.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/auth/verify" baseUrl="" summary="Verify Email" %}
+{% swagger method="get" path="/auth/verify" baseUrl="" summary="Verify Email" expanded="true" %}
 {% swagger-description %}
 This endpoint allows you to verify a registered account using the registered email and the OTP sent to that email address.
 {% endswagger-description %}
